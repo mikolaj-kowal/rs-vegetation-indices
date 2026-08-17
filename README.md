@@ -21,7 +21,8 @@ W projekcie przedstawiam podstawowe wskaźniki teledetekcyjne służące do ocen
 
 ##### Źródła danych
 
-- https://browser.dataspace.copernicus.eu
+- [Copernicus Browser](https://browser.dataspace.copernicus.eu)
+    - S2A_MSIL2A_20260726T093051_N0512_R136_T34UEB
 
 ##### Metodologia
 
@@ -165,4 +166,34 @@ W projekcie przedstawiam podstawowe wskaźniki teledetekcyjne służące do ocen
 </div>
 
 
+
+# Wskaźniki roślinnści
+### Normalized Difference Vegetation Index (NDVI)
+
+<br>
+<br>
+<p align="center">
+  <img src="docs\ndvi.png"><br>
+</p>
+<br>
+
+$$NDVI = \frac{NIR - RED}{NIR + RED}$$
+
+<p style="font-size: 0.9em;" align="center"><i>NIR - wartości odbitego promieniowania w bliskiej podczerwieni (B08)<br>
+RED - wartości odbitego promieniowania w paśmie czerwonym (B04)</i></p>
+
+**Charakterystyka**
+- znormalizowany wskaźnik wegetacji używany w teledetekcji do oceny kondycji roślinności
+- mierzy różnicę między odbiciem w bliskiej podczerwieni (NIR), silnie odbijanym przez zdrowe liście, a czerwienią (RED), pochłanianą przez chlorofil
+
+**Interpretacja wartości NDVI**
+- < 0 (wartości ujemne) - woda, chmury, śnieg
+- 0 – 0.2 - gleba, skały, beton
+- 0.2 – 0.5 - rzadka roślinność, wczesna faza rozwoju rolin, krzewy
+- 0.6 – 1.0 - zdrowa, gęsta roślinność, wysoka aktywność fotosyntetyczna
+
+**Zastosowanie**
+- rolnictwo precyzyjne (monitoring plonów, nawadnianie)
+- leśnictwo
+- analiza środowiskowa
 
