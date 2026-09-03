@@ -183,7 +183,7 @@ $$NDVI = \frac{NIR - RED}{NIR + RED}$$
 RED - wartości odbitego promieniowania w paśmie czerwonym (B04)</i></p>
 
 **Charakterystyka**
-- znormalizowany wskaźnik wegetacji używany w teledetekcji do oceny kondycji roślinności
+- znormalizowany wskaźnik wegetacji używany w teledetekcji do ogólnej oceny kondycji roślinności
 - mierzy różnicę między odbiciem w bliskiej podczerwieni (NIR), silnie odbijanym przez zdrowe liście, a czerwienią (RED), pochłanianą przez chlorofil
 
 **Interpretacja wartości NDVI**
@@ -192,8 +192,44 @@ RED - wartości odbitego promieniowania w paśmie czerwonym (B04)</i></p>
 - 0.2 – 0.5 - rzadka roślinność, wczesna faza rozwoju rolin, krzewy
 - 0.6 – 1.0 - zdrowa, gęsta roślinność, wysoka aktywność fotosyntetyczna
 
+Dense, healthy vegetation: 0.4 to 0.9
+Moderate vegetation: 0.2 to 0.4
+Sparse vegetation: 0.1 to 0.2
+Bare soil: < 0.1
+Water: < 0
+
 **Zastosowanie**
 - rolnictwo precyzyjne (monitoring plonów, nawadnianie)
 - leśnictwo
 - analiza środowiskowa
 
+### Enhanced Vegetation Index (EVI)
+
+<br>
+<br>
+<p align="center">
+  <img src="docs\evi.png"><br>
+</p>
+<br>
+
+$$EVI = 2.5\frac{NIR - RED}{NIR + 6RED - 7.5BLUE + 1}$$
+
+<p style="font-size: 0.9em;" align="center"><i>NIR - wartości odbitego promieniowania w bliskiej podczerwieni (B08)<br>
+RED - wartości odbitego promieniowania w paśmie czerwonym (B04) </br>
+BLUE - wartość odbitego promieniowania w paśmie niebieskim (B02)</i></p>
+
+**Charakterystyka**
+- lepiej sprawdza się na obszarach, na których NDVI może ulegać nadmiernemu nasyceniu
+- w porównaniu z NDVI daje dokładniejsze wyniki na obszarach o gęstej pokrywie roślinnej, na których wykazuje większą czułość na zmiany
+- uwzględnienie pasma niebieskiego pozwala skorygować wpływ sygnału pochodzącego z gleby oraz ograniczyć wpływ atmosfery
+
+**Interpretacja wartości EVI**
+- < 0 (wartości ujemne) – woda, chmury, śnieg
+- 0–0.2 – gleba, skały, beton
+- 0.2–0.5 – rzadka roślinność, wczesna faza rozwoju roślin, krzewy
+- 0.6–1.0 – zdrowa, gęsta roślinność, wysoka aktywność fotosyntetyczna
+
+**Zastosowanie**
+- monitoring lasów deszczowych
+- obszary o gęstej roślinności
+- badanie struktury koron drzew
