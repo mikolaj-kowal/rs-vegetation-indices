@@ -192,12 +192,6 @@ RED - wartości odbitego promieniowania w paśmie czerwonym (B04)</i></p>
 - 0.2 – 0.5 - rzadka roślinność, wczesna faza rozwoju rolin, krzewy
 - 0.6 – 1.0 - zdrowa, gęsta roślinność, wysoka aktywność fotosyntetyczna
 
-Dense, healthy vegetation: 0.4 to 0.9
-Moderate vegetation: 0.2 to 0.4
-Sparse vegetation: 0.1 to 0.2
-Bare soil: < 0.1
-Water: < 0
-
 **Zastosowanie**
 - rolnictwo precyzyjne (monitoring plonów, nawadnianie)
 - leśnictwo
@@ -225,11 +219,40 @@ BLUE - wartość odbitego promieniowania w paśmie niebieskim (B02)</i></p>
 
 **Interpretacja wartości EVI**
 - < 0 (wartości ujemne) – woda, chmury, śnieg
-- 0–0.2 – gleba, skały, beton
-- 0.2–0.5 – rzadka roślinność, wczesna faza rozwoju roślin, krzewy
-- 0.6–1.0 – zdrowa, gęsta roślinność, wysoka aktywność fotosyntetyczna
+- 0,0 – 0,2 – gleba, skały, beton
+- 0,2 – 0,5 – rzadka roślinność, wczesna faza rozwoju roślin, krzewy
+- 0,6 – 1,0 – zdrowa, gęsta roślinność, wysoka aktywność fotosyntetyczna
 
 **Zastosowanie**
 - monitoring lasów deszczowych
 - obszary o gęstej roślinności
 - badanie struktury koron drzew
+
+### Soil Adjusted Vegetation Index (SAVI)
+
+<br>
+<br>
+<p align="center">
+  <img src="docs\savi.png"><br>
+</p>
+<br>
+
+$$SAVI=\frac{(NIR - RED)}{(NIR + RED + L)}(L + 1)$$
+
+<p style="font-size: 0.9em;" align="center"><i>NIR - wartości odbitego promieniowania w bliskiej podczerwieni (B08)<br>
+RED - wartości odbitego promieniowania w paśmie czerwonym (B04) </br>
+L - współczynnik korekcji jasności gleby</i></p>
+
+**Charakterystyka**
+- daje podobne wyniki do NDVI, ale poprzez zastosowanie współczynnika korekcyjnego redukuje wpływ jasności gleby
+
+**Interpretacja wartości SAVI**
+- < 0,2 – widoczna gleba
+- 0,2 – 0,4 – rzadka roślinność
+- 0,4 – 0,7 – umiarkowana roślinność
+- 0,7 – 1,0 – gęsta roślinność
+
+**Zastosowanie**
+- monitoring wczesnych faz rozwoju roślin
+- obszary z rzadką roślinnością
+- obszary suche
