@@ -11,6 +11,8 @@ Analiza tych wskaźników znajduje szerokie zastosowanie w monitorowaniu zmian p
 
 W projekcie przedstawiam podstawowe wskaźniki teledetekcyjne służące do oceny stanu roślinności wraz z ich krótkim opisem, sposobem obliczenia oraz przykładem zastosowania w praktyce.
 
+Podane w projekcie wartości przedziałów służące do interpretacji poszczególnych wskaźników mają charakter orientacyjny. W wielu przypadkach wartości wskaźników zależą od rodzaju roślin oraz ich fazy rozwoju.
+
 <details>
 <summary><strong>Informacje o projekcie</strong></summary>
 
@@ -190,7 +192,7 @@ RED - wartości odbitego promieniowania w paśmie czerwonym (B04)</i></p>
 - < 0 (wartości ujemne) - woda, chmury, śnieg
 - 0 – 0.2 - gleba, skały, beton
 - 0.2 – 0.5 - rzadka roślinność, wczesna faza rozwoju rolin, krzewy
-- 0.6 – 1.0 - zdrowa, gęsta roślinność, wysoka aktywność fotosyntetyczna
+- \> 0.6 - zdrowa, gęsta roślinność, wysoka aktywność fotosyntetyczna
 
 **Zastosowanie**
 - rolnictwo precyzyjne (monitoring plonów, nawadnianie)
@@ -221,7 +223,7 @@ BLUE - wartość odbitego promieniowania w paśmie niebieskim (B02)</i></p>
 - < 0 (wartości ujemne) – woda, chmury, śnieg
 - 0,0 – 0,2 – gleba, skały, beton
 - 0,2 – 0,5 – rzadka roślinność, wczesna faza rozwoju roślin, krzewy
-- 0,6 – 1,0 – zdrowa, gęsta roślinność, wysoka aktywność fotosyntetyczna
+- \> 0,6 – zdrowa, gęsta roślinność, wysoka aktywność fotosyntetyczna
 
 **Zastosowanie**
 - monitoring lasów deszczowych
@@ -250,9 +252,39 @@ L - współczynnik korekcji jasności gleby</i></p>
 - < 0,2 – widoczna gleba
 - 0,2 – 0,4 – rzadka roślinność
 - 0,4 – 0,7 – umiarkowana roślinność
-- 0,7 – 1,0 – gęsta roślinność
+- \> 0,7 – gęsta roślinność
 
 **Zastosowanie**
 - monitoring wczesnych faz rozwoju roślin
 - obszary z rzadką roślinnością
 - obszary suche
+
+### Normalized Difference Red Edge (NDRE)
+
+<br>
+<br>
+<p align="center">
+  <img src="docs\ndre.png"><br>
+</p>
+<br>
+
+$$NDRE=\frac{(NIR - RedEdge)}{(NIR + RedEdge)}$$
+
+<p style="font-size: 0.9em;" align="center"><i>NIR - wartości odbitego promieniowania w bliskiej podczerwieni (B08)<br>
+RedEdge - wartości odbitego promieniowania w paśmie RedEdge (B8A)</i></p>
+
+**Charakterystyka**
+- pozwala na ocenę zawartości chlorofilu oraz poziomu azotu w roślinach
+- jest bardzo czuły na niewielkie zmiany stanu zdrowia roślinności, co pozwala na wczesne wykrycie stresu, zanim pojawi się on w analizach z wykorzystaniem indeksu NDVI lub będzie widoczny gołym okiem
+
+**Interpretacja wartości NDRE**
+- < 0 – brak roślinności
+- 0,0 - 0,2 – obumarła lub bardzo rzadka roślinność
+- 0,3 – 0,5 – umiarkowana roślinność, potencjalny lekki stres roślin
+- \> 0,5 – gęsta, dobrze odżywiona roślinność o wysokiej zawartości chlorofilu
+
+**Zastosowanie**
+- rolnictwo precyzyjne
+    - optymalizacja nawożenia
+    - wykrywanie chorób i szkodników
+    - wczesne wykrywanie stresu roślin
