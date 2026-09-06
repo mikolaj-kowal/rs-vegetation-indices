@@ -195,9 +195,9 @@ RED - wartości odbitego promieniowania w paśmie czerwonym (B04)</i></p>
 - \> 0.6 - zdrowa, gęsta roślinność, wysoka aktywność fotosyntetyczna
 
 **Zastosowanie**
-- rolnictwo precyzyjne (monitoring plonów, nawadnianie)
-- leśnictwo
-- analiza środowiskowa
+- ocena zdrowia i gęstości roślinności 
+- szacowanie ilości biomasy
+- monitoring rozwoju roślin
 
 ### Enhanced Vegetation Index (EVI)
 
@@ -221,7 +221,7 @@ BLUE - wartość odbitego promieniowania w paśmie niebieskim (B02)</i></p>
 
 **Interpretacja wartości EVI**
 - < 0 (wartości ujemne) – woda, chmury, śnieg
-- 0,0 – 0,2 – gleba, skały, beton
+- 0,0 – 0,2 – widoczna gleba, skały, tereny zurbanizowane
 - 0,2 – 0,5 – rzadka roślinność, wczesna faza rozwoju roślin, krzewy
 - \> 0,6 – zdrowa, gęsta roślinność, wysoka aktywność fotosyntetyczna
 
@@ -288,3 +288,32 @@ RedEdge - wartości odbitego promieniowania w paśmie RedEdge (B8A)</i></p>
     - optymalizacja nawożenia
     - wykrywanie chorób i szkodników
     - wczesne wykrywanie stresu roślin
+
+### Green Normalized Difference Vegetation Index (GNDVI)
+
+<br>
+<br>
+<p align="center">
+  <img src="docs\gndvi.png"><br>
+</p>
+<br>
+
+$$GNDVI=\frac{(NIR - GREEN)}{(NIR + GREEN)}$$
+
+<p style="font-size: 0.9em;" align="center"><i>NIR - wartości odbitego promieniowania w bliskiej podczerwieni (B08)<br>
+GREEN - wartości odbitego promieniowania w paśmie zielonym (B03)</i></p>
+
+**Charakterystyka**
+- wykazuje większą wrażliwość na zmianę zawartości chlorofilu w roślinach niż NDVI
+
+**Interpretacja wartości NDRE**
+- -0,3 - -0,1 - woda, śnieg
+- -0,1 - 0,2 - widoczna gleba, tereny zurbanizowane
+- 0,2 - 0,4 - rzadka roślinność, stres roślin
+- 0,4 - 0,7 - zdrowa roślinność
+- \> 0,7 - gęsta, zdrowa roślinność, szczyt wegetacji
+
+**Zastosowanie**
+- obszary o gęstym pokryciu roślinnością
+- wykrywanie stresu roślin
+- szacowanie zawartości chlorofilu w roślinach
