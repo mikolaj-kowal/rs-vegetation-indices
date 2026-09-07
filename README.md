@@ -179,14 +179,14 @@ Podane w projekcie wartości przedziałów służące do interpretacji poszczeg�
 </p>
 <br>
 
-$$NDVI = \frac{NIR - RED}{NIR + RED}$$
+$$NDVI = \frac{NIR - Red}{NIR + Red}$$
 
 <p style="font-size: 0.9em;" align="center"><i>NIR - wartości odbitego promieniowania w bliskiej podczerwieni (B08)<br>
-RED - wartości odbitego promieniowania w paśmie czerwonym (B04)</i></p>
+Red - wartości odbitego promieniowania w paśmie czerwonym (B04)</i></p>
 
 **Charakterystyka**
 - znormalizowany wskaźnik wegetacji używany w teledetekcji do ogólnej oceny kondycji roślinności
-- mierzy różnicę między odbiciem w bliskiej podczerwieni (NIR), silnie odbijanym przez zdrowe liście, a czerwienią (RED), pochłanianą przez chlorofil
+- mierzy różnicę między odbiciem w bliskiej podczerwieni (NIR), silnie odbijanym przez zdrowe liście, a czerwienią (Red), pochłanianą przez chlorofil
 
 **Interpretacja wartości NDVI**
 - < 0 (wartości ujemne) - woda, chmury, śnieg
@@ -208,11 +208,11 @@ RED - wartości odbitego promieniowania w paśmie czerwonym (B04)</i></p>
 </p>
 <br>
 
-$$EVI = 2.5\frac{NIR - RED}{NIR + 6RED - 7.5BLUE + 1}$$
+$$EVI = 2.5\frac{NIR - Red}{NIR + 6Red - 7.5Blue + 1}$$
 
 <p style="font-size: 0.9em;" align="center"><i>NIR - wartości odbitego promieniowania w bliskiej podczerwieni (B08)<br>
-RED - wartości odbitego promieniowania w paśmie czerwonym (B04) </br>
-BLUE - wartość odbitego promieniowania w paśmie niebieskim (B02)</i></p>
+Red - wartości odbitego promieniowania w paśmie czerwonym (B04) </br>
+Blue - wartość odbitego promieniowania w paśmie niebieskim (B02)</i></p>
 
 **Charakterystyka**
 - lepiej sprawdza się na obszarach, na których NDVI może ulegać nadmiernemu nasyceniu
@@ -221,7 +221,7 @@ BLUE - wartość odbitego promieniowania w paśmie niebieskim (B02)</i></p>
 
 **Interpretacja wartości EVI**
 - < 0 (wartości ujemne) – woda, chmury, śnieg
-- 0,0 – 0,2 – widoczna gleba, skały, tereny zurbanizowane
+- 0,0 – 0,2 – odkryta gleba, skały, tereny zurbanizowane
 - 0,2 – 0,5 – rzadka roślinność, wczesna faza rozwoju roślin, krzewy
 - \> 0,6 – zdrowa, gęsta roślinność, wysoka aktywność fotosyntetyczna
 
@@ -239,20 +239,49 @@ BLUE - wartość odbitego promieniowania w paśmie niebieskim (B02)</i></p>
 </p>
 <br>
 
-$$SAVI=\frac{(NIR - RED)}{(NIR + RED + L)}(L + 1)$$
+$$SAVI=\frac{(NIR - Red)}{(NIR + Red + L)}(L + 1)$$
 
 <p style="font-size: 0.9em;" align="center"><i>NIR - wartości odbitego promieniowania w bliskiej podczerwieni (B08)<br>
-RED - wartości odbitego promieniowania w paśmie czerwonym (B04) </br>
-L - współczynnik korekcji jasności gleby</i></p>
+Red - wartości odbitego promieniowania w paśmie czerwonym (B04) </br>
+L - współczynnik korekcji tła glebowego</i></p>
 
 **Charakterystyka**
-- daje podobne wyniki do NDVI, ale poprzez zastosowanie współczynnika korekcyjnego redukuje wpływ jasności gleby
+- daje podobne wyniki do NDVI, ale poprzez zastosowanie współczynnika korekcyjnego redukuje wpływ tła glebowego
 
 **Interpretacja wartości SAVI**
-- < 0,2 – widoczna gleba
+- < 0,2 – odkryta gleba
 - 0,2 – 0,4 – rzadka roślinność
 - 0,4 – 0,7 – umiarkowana roślinność
 - \> 0,7 – gęsta roślinność
+
+**Zastosowanie**
+- monitoring wczesnych faz rozwoju roślin
+- obszary z rzadką roślinnością
+- obszary suche
+
+### Modified Soil Adjusted Vegetation Index (MSAVI)
+
+<br>
+<br>
+<p align="center">
+  <img src="docs\msavi.png"><br>
+</p>
+<br>
+
+$$MSAVI=\frac{1}{2}(2NIR+1-\sqrt{(2NIR+1)^2-8(NIR - Red)})$$
+
+<p style="font-size: 0.9em;" align="center"><i>NIR - wartości odbitego promieniowania w bliskiej podczerwieni (B08)<br>
+Red - wartości odbitego promieniowania w paśmie czerwonym (B04)</i></p>
+
+**Charakterystyka**
+- minimalizuje wpływ tła glebowego bez konieczności podawania parametrów współczynnika korekcyjnego, dzięki czemu automatycznie dostosowuje się do zmiennych warunków glebowych
+
+**Interpretacja wartości MSAVI**
+- -0,3 - -0,1 - woda, śnieg
+- -0,1 - 0,2 - odkryta gleba, tereny zurbanizowane
+- 0,2 - 0,4 - rzadka roślinność, stres roślin
+- 0,4 - 0,7 - zdrowa roślinność
+- \> 0,7 - gęsta, zdrowa roślinność, szczyt wegetacji
 
 **Zastosowanie**
 - monitoring wczesnych faz rozwoju roślin
@@ -298,17 +327,17 @@ RedEdge - wartości odbitego promieniowania w paśmie RedEdge (B8A)</i></p>
 </p>
 <br>
 
-$$GNDVI=\frac{(NIR - GREEN)}{(NIR + GREEN)}$$
+$$GNDVI=\frac{(NIR - Green)}{(NIR + Green)}$$
 
 <p style="font-size: 0.9em;" align="center"><i>NIR - wartości odbitego promieniowania w bliskiej podczerwieni (B08)<br>
-GREEN - wartości odbitego promieniowania w paśmie zielonym (B03)</i></p>
+Green - wartości odbitego promieniowania w paśmie zielonym (B03)</i></p>
 
 **Charakterystyka**
 - wykazuje większą wrażliwość na zmianę zawartości chlorofilu w roślinach niż NDVI
 
 **Interpretacja wartości NDRE**
 - -0,3 - -0,1 - woda, śnieg
-- -0,1 - 0,2 - widoczna gleba, tereny zurbanizowane
+- -0,1 - 0,2 - odkryta gleba, tereny zurbanizowane
 - 0,2 - 0,4 - rzadka roślinność, stres roślin
 - 0,4 - 0,7 - zdrowa roślinność
 - \> 0,7 - gęsta, zdrowa roślinność, szczyt wegetacji
@@ -317,3 +346,4 @@ GREEN - wartości odbitego promieniowania w paśmie zielonym (B03)</i></p>
 - obszary o gęstym pokryciu roślinnością
 - wykrywanie stresu roślin
 - szacowanie zawartości chlorofilu w roślinach
+
