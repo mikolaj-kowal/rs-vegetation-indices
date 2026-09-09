@@ -9,7 +9,7 @@ Są to matematyczne kombinacje wykorzystujące charakterystyczne właściwości 
 
 Analiza tych wskaźników znajduje szerokie zastosowanie w monitorowaniu zmian pokrycia terenu, ocenie kondycji upraw, wykrywaniu stresu roślin spowodowanego suszą lub chorobami, a także w badaniach ekosystemów leśnych i rolniczych. Dzięki danym teledetekcyjnym możliwe jest prowadzenie regularnej i przestrzennej oceny stanu roślinności na dużych obszarach, co wspiera m.in. rolnictwo precyzyjne, zarządzanie zasobami naturalnymi oraz monitoring środowiska.
 
-W projekcie przedstawiam podstawowe wskaźniki teledetekcyjne służące do oceny stanu roślinności wraz z ich krótkim opisem, sposobem obliczenia oraz przykładem zastosowania w praktyce.
+W projekcie przedstawiam podstawowe wskaźniki teledetekcyjne służące do oceny stanu roślinności wraz z ich krótkim opisem oraz sposobem obliczenia oraz przykładem zastosowania w praktyce.
 
 Podane w projekcie wartości przedziałów służące do interpretacji poszczególnych wskaźników mają charakter orientacyjny. W wielu przypadkach wartości wskaźników zależą od rodzaju roślin oraz ich fazy rozwoju.
 
